@@ -9,7 +9,7 @@ import {
 } from './types';
 
 // Base URL for the API - can be configured via environment variables
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000';
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE || 'https://mehtabalikhan-todo-app-phase2.hf.space';
 
 // Utility function to get auth headers
 const getAuthHeaders = (token?: string) => {

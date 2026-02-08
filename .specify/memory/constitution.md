@@ -1,55 +1,45 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+SYNC IMPACT REPORT
+Version change: N/A -> 1.0.0
+Modified principles: None (new constitution)
+Added sections: All sections (new constitution for Phase II Todo app)
+Removed sections: None (new constitution)
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ✅ needs review for constitution check alignment
+  - .specify/templates/spec-template.md: ✅ needs review for scope/requirements alignment
+  - .specify/templates/tasks-template.md: ✅ needs review for task categorization alignment
+Follow-up TODOs: None
+-->
+
+# Phase II Full-Stack Todo Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Spec-driven over Code-driven Development
+All development must be governed by specifications first. Code implementation follows detailed specs that define user stories, acceptance criteria, and system behavior. Specifications must be complete before implementation begins.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### AI Agents as System Architects
+AI agents act as system architects and spec writers, not just code generators. They design system architecture, define interfaces, and ensure cross-stack coordination between frontend, backend, and database layers.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Security-First Architecture
+Implement security-first principles with JWT authentication, user data isolation, zero trust APIs, and secure data handling. All user data must be properly isolated and authenticated access enforced.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Cloud-Native and Scalable Design
+Design systems to be cloud-native and future Kubernetes-ready. Use serverless components where appropriate, implement proper scaling patterns, and ensure the architecture supports horizontal scaling.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Clear Separation of Concerns
+Maintain clear separation between frontend, backend, database, and specification layers. Each layer must have well-defined interfaces and minimal coupling to other layers.
 
-### [PRINCIPLE_6_NAME]
+### Cross-Stack Collaboration
+Establish clear protocols for collaboration between different technology stacks (Next.js frontend, FastAPI backend, Neon PostgreSQL). Ensure consistent data formats, API contracts, and error handling across stacks.
 
+## Technology Stack Requirements
+Use the defined system stack: Next.js (App Router) for frontend, FastAPI for backend, SQLModel for database modeling, Neon Serverless PostgreSQL for database, Better Auth with JWT for authentication, and Spec-Kit Plus for development methodology.
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Quality, Testing, and Validation Standards
+Implement comprehensive testing at all levels: unit tests for individual components, integration tests for API endpoints, end-to-end tests for user flows, and security tests for authentication and data access. All code must pass quality gates before merging.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution governs all development activities for the Phase II Todo application. All code changes must align with the established specifications. Deviations from these principles require explicit amendment to the constitution with proper justification and approval. Regular compliance reviews must be conducted to ensure adherence to these principles.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-17 | **Last Amended**: 2026-01-17

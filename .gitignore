@@ -1,0 +1,23 @@
+#ignore AI generated docs
+*.md
+!README.md
+CLAUDE.md
+#ignore temp files
+tmpclaude-*
+#ignore python cache
+__pycache__/
+*.pyc
+#ignore Node modules
+node_modules/
+.next/
+*.db
+*.pyc
+*.out
+specs/
+simple_auth_test*
+test_*.py
+.env 
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local 
